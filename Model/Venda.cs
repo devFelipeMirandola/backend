@@ -8,6 +8,10 @@ namespace backend.Model
 {
     public class Venda
     {
+        public Venda()
+        {
+            Produtos = new HashSet<VendaProduto>();
+        }
         public int Id { get; set; }
         public decimal ValorTotal { get; set; }
         
@@ -15,9 +19,14 @@ namespace backend.Model
         public int UsuarioId { get; set; }
 
         [ForeignKey(nameof(Cliente))]
-        public int ClienteId { get; set; }
+        public int? ClienteId { get; set; }
+
         public DateTime DataCriacao { get; set; }
+
+        public virtual ICollection<VendaProduto> Produtos { get; set; }
+
         public virtual Cliente Cliente { get; set; }
+
         public virtual Usuario Usuario { get; set; }
     }
 }

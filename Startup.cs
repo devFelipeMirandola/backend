@@ -13,9 +13,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Telegram.Bot;
 using backend.Business.Interface;
 using backend.Business.Service;
+using reposbackend.Business.Interface;
+using reposbackend.Business.Service;
 
 namespace backend
 {
@@ -41,8 +42,9 @@ namespace backend
                 c.UseSqlServer("Server=localhost\\MSSQLSERVER02;Database=DB_VENDA;Trusted_Connection=True;User=dev;Password=dev@123");
             });
 
-
             services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
+            services.AddScoped<IVendaService, VendaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

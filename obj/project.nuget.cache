@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Zr2G5wOyA5+S8hP9lHo9QfzIAp+Hi0zwgxFOtR8uBGzMZOxWuf/ZBjJD1i7z7QTCvdKEqJVL0wUp74Zq8Umkw==",
+  "dgSpecHash": "oYQ5olbNX3l3BATX1lwiHOci1srogQURpZM/mcPi6hdKBKjmOLnMfhCeFUJiZGmOMPE2eqZuX6KUy2+MdIi8CQ==",
   "success": true,
-  "projectFilePath": "e:\\Apps\\reposbackend\\backend.csproj",
+  "projectFilePath": "E:\\Apps\\reposbackend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\T-Gamer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\T-Gamer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -103,8 +103,7 @@
     "C:\\Users\\T-Gamer\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\T-Gamer\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\T-Gamer\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\T-Gamer\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\T-Gamer\\.nuget\\packages\\telegram.bot\\17.0.0\\telegram.bot.17.0.0.nupkg.sha512"
+    "C:\\Users\\T-Gamer\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
