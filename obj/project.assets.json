@@ -5678,11 +5678,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Apps\\backend\\backend.csproj",
+      "projectUniqueName": "e:\\Apps\\reposbackend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "E:\\Apps\\backend\\backend.csproj",
+      "projectPath": "e:\\Apps\\reposbackend\\backend.csproj",
       "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
-      "outputPath": "E:\\Apps\\backend\\obj\\",
+      "outputPath": "e:\\Apps\\reposbackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
