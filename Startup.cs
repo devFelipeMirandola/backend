@@ -45,6 +45,7 @@ namespace backend
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<IVendaService, VendaService>();
+            services.AddScoped<IClienteService, ClienteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

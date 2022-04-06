@@ -18,11 +18,11 @@ namespace reposbackend.Controllers
             this._categoriaService = _categoriaService ?? throw new ArgumentNullException(nameof(_categoriaService));
         }
 
-        [HttpGet]
+        [HttpGet("{somenteAtivos}")]
         [ProducesDefaultResponseType(typeof(List<CategoriaDto>))]
-        public async Task<IActionResult> RecuperarTodos(){
+        public async Task<IActionResult> RecuperarTodos(bool somenteAtivos){
             try{
-                var valor = await _categoriaService.RecuperarTodos();
+                var valor = await _categoriaService.RecuperarTodos(somenteAtivos);
                 return Sucesso(mensagem: "Categorias recuperadas com sucesso.", dados: valor);
             }
             catch(Exception ex)

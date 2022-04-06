@@ -17,5 +17,6 @@ namespace backend.Model
         public string Cpf { get; set; }
         public DateTime DataCriacao { get; set; }
         public bool Ativo { get; set; }
+        public virtual ICollection<Venda> Compras { get; set; }
     }
 }

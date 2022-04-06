@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Apps\\reposbackend\\backend.csproj": {}
+    "e:\\Apps\\reposbackend\\backend.csproj": {}
   },
   "projects": {
-    "E:\\Apps\\reposbackend\\backend.csproj": {
+    "e:\\Apps\\reposbackend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Apps\\reposbackend\\backend.csproj",
+        "projectUniqueName": "e:\\Apps\\reposbackend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "E:\\Apps\\reposbackend\\backend.csproj",
+        "projectPath": "e:\\Apps\\reposbackend\\backend.csproj",
         "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
-        "outputPath": "E:\\Apps\\reposbackend\\obj\\",
+        "outputPath": "e:\\Apps\\reposbackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",

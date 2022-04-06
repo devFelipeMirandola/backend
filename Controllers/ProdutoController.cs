@@ -38,11 +38,11 @@ namespace backend.Controllers
             { return Falha(ex.Message); }
         }
         
-        [HttpGet]
+        [HttpGet("{somenteAtivos}")]
         [ProducesDefaultResponseType(typeof(List<ProdutoDto>))]
-        public async Task<IActionResult> RecuperarTodos(){
+        public async Task<IActionResult> RecuperarTodos(bool somenteAtivos){
             try{
-                var dados = await _produtoService.RecuperarTodos();
+                var dados = await _produtoService.RecuperarTodos(somenteAtivos);
                 return Sucesso(dados: dados, mensagem: "Produtos recuperados com sucesso.");
             }
             catch(Exception ex)
