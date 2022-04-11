@@ -13,5 +13,6 @@ namespace backend.Business.Interface
         Task Remover(int produtoId);
         Task<ProdutoDto> Recuperar(int produtoId);
         Task<List<ProdutoDto>> RecuperarTodos(bool somenteAtivos = true);
+        Task SubtrairProdutoEstoque(int produtoId, int quantidade);
     }
 }

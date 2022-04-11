@@ -13,6 +13,8 @@ namespace reposbackend.Domain
         }
         public int? ClienteId { get; set; }
         public int UsuarioId { get; set; }
+        public bool Entrega { get; set; }
+        public EntregaDto DadosEntrega { get; set; }
         public List<ProdutoVendaDto> Produtos { get; set; }
     }
 
@@ -20,5 +22,10 @@ namespace reposbackend.Domain
     {
         public int ProdutoId { get; set; }
         public int Quantidade { get; set; }
+    }
+
+    public class EntregaDto {
+        public string Endereco { get; set; }
+        public DateTime DataEntrega { get; set; }
     }
 }

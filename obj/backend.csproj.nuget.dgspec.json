@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Apps\\reposbackend\\backend.csproj": {}
+    "E:\\Apps\\reposbackend\\backend.csproj": {}
   },
   "projects": {
-    "e:\\Apps\\reposbackend\\backend.csproj": {
+    "E:\\Apps\\reposbackend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Apps\\reposbackend\\backend.csproj",
+        "projectUniqueName": "E:\\Apps\\reposbackend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "e:\\Apps\\reposbackend\\backend.csproj",
+        "projectPath": "E:\\Apps\\reposbackend\\backend.csproj",
         "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
-        "outputPath": "e:\\Apps\\reposbackend\\obj\\",
+        "outputPath": "E:\\Apps\\reposbackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.1, )"

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using reposbackend.Model;
 
 namespace backend.Model
 {
@@ -28,5 +29,7 @@ namespace backend.Model
         public virtual Cliente Cliente { get; set; }
 
         public virtual Usuario Usuario { get; set; }
+
+        public virtual Entrega Entrega { get; set; }
     }
 }

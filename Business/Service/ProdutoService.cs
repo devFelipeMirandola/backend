@@ -99,5 +99,18 @@ namespace backend.Business.Service
             { throw ex; }
         }
 
+        public async Task SubtrairProdutoEstoque(int produtoId, int quantidade){
+            try{
+                var produto = await _context.Produto.Where(w => w.Id == produtoId).FirstOrDefaultAsync();
+
+                if(produto is null)
+                { throw new Exception($"Produto [{produtoId}] não encontrado na base."); }
+
+                produto.Estoque = produto.Estoque - quantidade;
+            }
+            catch(Exception ex)
+            { throw ex; }
+        }
+
     }
 }
