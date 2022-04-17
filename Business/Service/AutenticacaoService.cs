@@ -56,7 +56,7 @@ namespace reposbackend.Business.Service
                 }
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public IEnumerable<Claim> GetClaimProfilePropertys(TokenValidatedContext tvc)

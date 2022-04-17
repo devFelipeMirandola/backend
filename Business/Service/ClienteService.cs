@@ -39,7 +39,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task<List<ClienteDto>> RecuperarTodos(bool somenteAtivos = true){
@@ -53,7 +53,7 @@ namespace reposbackend.Business.Service
                 }).ToListAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task<ClienteDto> Recuperar(int clienteId){
@@ -67,7 +67,7 @@ namespace reposbackend.Business.Service
                 }).FirstOrDefaultAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Editar(ClienteDto dto){
@@ -87,7 +87,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Remover(int clienteId){
@@ -102,7 +102,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
     }
 }

@@ -59,7 +59,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         private async Task<decimal> CalcValorTotal(List<ProdutoVendaDto> dto){
@@ -75,7 +75,7 @@ namespace reposbackend.Business.Service
                 return valorTotal;
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
     }
 }

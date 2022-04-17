@@ -32,7 +32,7 @@ namespace reposbackend.Business.Service
                 return novaEntrega;
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task RecuperarEntregas(){
@@ -52,7 +52,7 @@ namespace reposbackend.Business.Service
                 .ToListAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
     }
 }

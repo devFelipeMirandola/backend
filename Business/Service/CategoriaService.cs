@@ -27,7 +27,7 @@ namespace reposbackend.Business.Service
                 }).ToListAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task<CategoriaDto> Recuperar(int categoriaId){
@@ -39,7 +39,7 @@ namespace reposbackend.Business.Service
                 }).FirstOrDefaultAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Remover(int categoriaId){
@@ -51,7 +51,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Editar(CategoriaDto dto){
@@ -64,7 +64,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Adicionar(string categoria){
@@ -78,7 +78,7 @@ namespace reposbackend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
     }
 }

@@ -35,7 +35,7 @@ namespace backend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Editar(ProdutoDto dto){
@@ -52,7 +52,7 @@ namespace backend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task Remover(int produtoId){
@@ -62,7 +62,7 @@ namespace backend.Business.Service
                 await _context.SaveChangesAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task<ProdutoDto> Recuperar(int produtoId){
@@ -79,7 +79,7 @@ namespace backend.Business.Service
                 }).FirstOrDefaultAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task<List<ProdutoDto>> RecuperarTodos(bool somenteAtivos = true){
@@ -96,7 +96,7 @@ namespace backend.Business.Service
                 }).ToListAsync();
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
         public async Task SubtrairProdutoEstoque(int produtoId, int quantidade){
@@ -109,7 +109,7 @@ namespace backend.Business.Service
                 produto.Estoque = produto.Estoque - quantidade;
             }
             catch(Exception ex)
-            { throw ex; }
+            { var excpt = ex; throw; }
         }
 
     }
