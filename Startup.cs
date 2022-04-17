@@ -17,6 +17,8 @@ using backend.Business.Interface;
 using backend.Business.Service;
 using reposbackend.Business.Interface;
 using reposbackend.Business.Service;
+using reposbackend.Infra;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace backend
 {
@@ -28,24 +30,38 @@ namespace backend
         }
         public IConfiguration Configuration { get; }
 
+        private JwtSettings jwtSettings;
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddSingleton(Configuration);
 
             services.AddControllers();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "backend", Version = "v1" });
             });
+
             services.AddCors();
+
             services.AddDbContext<Context>(c => {
                 c.UseSqlServer("Server=localhost\\MSSQLSERVER02;Database=DB_VENDA;Trusted_Connection=True;User=dev;Password=dev@123");
             });
+
+            jwtSettings = new JwtSettings(Configuration);
+            services.TryAddSingleton(jwtSettings);
 
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<IVendaService, VendaService>();
             services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IAutenticacaoService, AutenticacaoService>();
+            services.AddScoped<IEntregaService, EntregaService>();
+            services.AddScoped<IJWTService, JWTService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

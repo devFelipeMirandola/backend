@@ -15,11 +15,14 @@ namespace reposbackend.Business.Service
     {
         private readonly Context _context;
         private readonly IProdutoService _produtoService;
+        private readonly IEntregaService _entregaService;
         
         public VendaService(Context _context
-        , IProdutoService _produtoService){
+        , IProdutoService _produtoService
+        , IEntregaService _entregaService){
             this._context = _context ?? throw new ArgumentNullException(nameof(_context));
             this._produtoService = _produtoService ?? throw new ArgumentNullException(nameof(_produtoService));
+            this._entregaService = _entregaService ?? throw new ArgumentNullException(nameof(_entregaService));
         }
 
         public async Task Gerar(NovaVendaDto dto){
@@ -32,6 +35,8 @@ namespace reposbackend.Business.Service
                     DataCriacao = DateTime.Now,
                     Produtos = dto.Produtos.Select(s => new VendaProduto{
                         ProdutoId = s.ProdutoId,
+                        Quantidade = s.Quantidade,
+                        Observacao = s.Observacao
                     }).ToList(),
                     UsuarioId = dto.UsuarioId,
                     ValorTotal = valorTotal
@@ -41,15 +46,10 @@ namespace reposbackend.Business.Service
                 {
                     await _produtoService.SubtrairProdutoEstoque(prod.ProdutoId, prod.Quantidade);
                 }
-                
 
                 if(dto.Entrega)
                 {
-                    var novaEntrega = new Entrega{
-                        DataAgendada = dto.DadosEntrega.DataEntrega,
-                        Endereco = dto.DadosEntrega.Endereco,
-                        StatusId = StatusEntregaEnum.Aguardando,
-                    };
+                    var novaEntrega = _entregaService.AgendarEntrega(dto.DadosEntrega);
 
                     novaVenda.Entrega = novaEntrega;
                 }

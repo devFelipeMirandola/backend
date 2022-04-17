@@ -22,10 +22,30 @@ namespace reposbackend.Domain
     {
         public int ProdutoId { get; set; }
         public int Quantidade { get; set; }
+        public string Observacao { get; set; }
     }
 
     public class EntregaDto {
         public string Endereco { get; set; }
+        public string Anotacoes { get; set; }
         public DateTime DataEntrega { get; set; }
+    }
+
+    public class RetornoEntregaDto {
+        public RetornoEntregaDto()
+        {
+            Produtos = new List<ProdutosEntregaDto>();
+        }
+
+        public string Endereco { get; set; }
+        public string Anotacoes { get; set; }
+        public DateTime DataAgendada { get; set; }
+        public List<ProdutosEntregaDto> Produtos { get; set; }
+    }
+
+    public class ProdutosEntregaDto {
+        public string Produto { get; set; }
+        public string Observacao { get; set; }
+        public int Quantidade { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace reposbackend.Infra
 {
-        public class JwtSettings
+    public class JwtSettings
     {
         /// <summary>
         /// Audiencia

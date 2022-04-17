@@ -10,7 +10,7 @@ using reposbackend.Business.Interface;
 
 namespace reposbackend.Business.Service
 {
-    public class AutenticacaoService
+    public class AutenticacaoService : IAutenticacaoService
     {
         private readonly IJWTService _jwtService;
         private readonly Context _context;

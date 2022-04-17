@@ -22,6 +22,8 @@ namespace backend.Model
         [ForeignKey(nameof(Cliente))]
         public int? ClienteId { get; set; }
 
+        public string NomeCliente { get; set; }
+
         public DateTime DataCriacao { get; set; }
 
         public virtual ICollection<VendaProduto> Produtos { get; set; }

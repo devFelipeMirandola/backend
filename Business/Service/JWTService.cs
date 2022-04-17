@@ -4,11 +4,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using reposbackend.Business.Interface;
 using reposbackend.Infra;
 
 namespace reposbackend.Business.Service
 {
-    public class JWTService
+    public class JWTService : IJWTService
     {
         private readonly JwtSettings _jwtSettings;
 
@@ -17,7 +18,7 @@ namespace reposbackend.Business.Service
             this._jwtSettings = settings ?? throw new ArgumentNullException(nameof(settings));
         }
 
-        public JsonWebToken CreateJsonWebToken(IEnumerable<Claim> claims)
+        public JsonWebToken CreateJsonWebToken(List<Claim> claims)
         {
             var handler = new JwtSecurityTokenHandler();
 

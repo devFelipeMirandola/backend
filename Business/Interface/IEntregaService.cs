@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
-using reposbackend.Infra;
+using reposbackend.Domain;
+using reposbackend.Model;
 
 namespace reposbackend.Business.Interface
 {
-    public interface IJWTService
+    public interface IEntregaService
     {
-        JsonWebToken CreateJsonWebToken(List<Claim> claims);
+        Entrega AgendarEntrega(EntregaDto entrega);
     }
 }

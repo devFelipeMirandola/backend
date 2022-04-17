@@ -16,6 +16,8 @@ namespace reposbackend.Model
         public int Id { get; set; }
         
         public string Endereco { get; set; }
+        
+        public string Anotacoes { get; set; }
 
         public DateTime DataAgendada { get; set; }
 
